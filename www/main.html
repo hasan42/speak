@@ -11,7 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/grid.css" />
 	<link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
 	<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
-	<link rel="stylesheet" type="text/css" href="css/easydropdown.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,9 +22,7 @@
 	
 	<script src="https://use.fontawesome.com/366c8b25de.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="js/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easydropdown.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -35,28 +32,15 @@
 			<div class="header-block">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-1">
+						<div class="col-lg-1 col-md-4">
 							<div class="header-logo">
 								<a href="/main.html">
-									<img src="images/logo.png" alt=""><br>
-									<span>Самый приветливый затройщик</span>
+									<div class="header-logo__image"><img src="images/logo.svg" alt=""></div>
+									<div class="header-logo__slogan">Самый&nbsp;приветливый<br>затройщик</div>
 								</a>
 							</div>
 						</div>
-						<div class="col-xs-offset-1 col-xs-7">
-							<div class="header-menu">
-								<nav>
-									<a href="#" class="header-menu__item header-menu__item_submenu">о застройщике</a>
-									<a href="#" class="header-menu__item">недвижимость</a>
-									<a href="#" class="header-menu__item header-menu__item_submenu">квартал дружбы</a>
-									<a href="#" class="header-menu__item">акции</a>
-									<a href="#" class="header-menu__item">новости</a>
-									<a href="#" class="header-menu__item">условия оплаты</a>
-									<a href="#" class="header-menu__item">контакты</a>
-								</nav>
-							</div>
-						</div>
-						<div class="col-xs-3">
+						<div class="col-lg-3 col-lg-push-8 col-md-8">
 							<div class="header-info">
 								<div class="header-info__home">
 									<a href="#">Выбрать квартиру</a>
@@ -70,21 +54,34 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-lg-offset-1 col-lg-7 col-lg-pull-3 col-md-12">
+							<div class="header-menu">
+								<nav>
+									<a href="#" class="header-menu__item header-menu__item_submenu">о застройщике</a>
+									<a href="#" class="header-menu__item">недвижимость</a>
+									<a href="#" class="header-menu__item header-menu__item_submenu">квартал дружбы</a>
+									<a href="#" class="header-menu__item">акции</a>
+									<a href="#" class="header-menu__item">новости</a>
+									<a href="#" class="header-menu__item">условия оплаты</a>
+									<a href="#" class="header-menu__item">контакты</a>
+								</nav>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="header-submenu">
 					<div class="container">
 						<div class="header-submenu__inner">
 							<div class="row">
-								<div class="col-xs-2">
+								<div class="col-lg-2 col-md-2">
 									<div class="header-submenu__close"></div>
 								</div>
-								<div class="col-xs-2">
+								<div class="col-lg-2 col-md-3">
 									<a href="#" class="header-submenu__item">О проекте</a>
 									<a href="#" class="header-submenu__item">Выбор на генплане</a>
 									<a href="#" class="header-submenu__item">Расположение</a>
 								</div>
-								<div class="col-xs-2">
+								<div class="col-lg-2 col-md-3">
 									<a href="#" class="header-submenu__item">Дневник стройки</a>
 									<a href="#" class="header-submenu__item">Технологии</a>
 									<a href="#" class="header-submenu__item">Раскрытие информации</a>
@@ -104,7 +101,7 @@
 					<div class="media-item__info">
 						<div class="container">
 							<div class="row">
-								<div class="col-xs-9">
+								<div class="col-lg-9 col-md-9">
 									<div class="media-item__about">
 										<div class="media-item__header">новый квартал<br />комфорт-класса</div>
 										<ul class="media-item__description">
@@ -115,13 +112,13 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-xs-3">
+								<div class="col-lg-3 col-md-3">
 									<div class="media-item__add">
 										<div class="media-item__control">
 											<a href="#" class="media-control__map"><span>расположение</span></a>
 											<a href="#" class="media-control__filter"><span>подбор по параметрам</span></a>
 										</div>
-										<div class="media-item__image"><img src="images/media-image-00.png" alt=""></div>
+										<div class="media-item__image"><a href="#"><img src="images/media-image-00.svg" alt=""></a></div>
 									</div>
 								</div>
 							</div>
@@ -132,7 +129,7 @@
 					<div class="media-item__info">
 						<div class="container">
 							<div class="row">
-								<div class="col-xs-9">
+								<div class="col-lg-9 col-md-9">
 									<div class="media-item__about">
 										<div class="media-item__header">новый квартал<br />комфорт-класса</div>
 										<ul class="media-item__description">
@@ -143,13 +140,13 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-xs-3">
+								<div class="col-lg-3 col-md-3">
 									<div class="media-item__add">
 										<div class="media-item__control">
-											<a href="#" class="media-control__map">расположение</a>
-											<a href="#" class="media-control__filter">подбор по параметрам</a>
+											<a href="#" class="media-control__map"><span>расположение</span></a>
+											<a href="#" class="media-control__filter"><span>подбор по параметрам</span></a>
 										</div>
-										<div class="media-item__image"><img src="images/media-image-00.png" alt=""></div>
+										<div class="media-item__image"><a href="#"><img src="images/media-image-00.svg" alt=""></a></div>
 									</div>
 								</div>
 							</div>
@@ -160,7 +157,7 @@
 					<div class="media-item__info">
 						<div class="container">
 							<div class="row">
-								<div class="col-xs-9">
+								<div class="col-lg-9 col-md-9">
 									<div class="media-item__about">
 										<div class="media-item__header">новый квартал<br />комфорт-класса</div>
 										<ul class="media-item__description">
@@ -171,13 +168,13 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-xs-3">
+								<div class="col-lg-3 col-md-3">
 									<div class="media-item__add">
 										<div class="media-item__control">
-											<a href="#" class="media-control__map">расположение</a>
-											<a href="#" class="media-control__filter">подбор по параметрам</a>
+											<a href="#" class="media-control__map"><span>расположение</span></a>
+											<a href="#" class="media-control__filter"><span>подбор по параметрам</span></a>
 										</div>
-										<div class="media-item__image"><img src="images/media-image-00.png" alt=""></div>
+										<div class="media-item__image"><a href="#"><img src="images/media-image-00.svg" alt=""></a></div>
 									</div>
 								</div>
 							</div>
@@ -190,78 +187,90 @@
 		<section>
 			<div class="features-block">
 				<div class="features-item">
-					<div class="features-item__desc">
-						<div class="features-item__image"></div>
-						<div class="feature-item__header"></div>
+					<div class="features-item__desc features-item__desc_place">
+						<div class="features-item__image"><img src="images/desc-place.svg" alt=""></div>
+						<div class="features-item__header">Идеальное местоположение</div>
+						<div class="features-item__text">Расположен в экологически чистом районе, вдали от крупных промышленных предприятий, с развитой инфраструктурой и транспортной доступностью. 10 минут: до центра города, до ж/д. вокзала и аэропорта. </div>
 					</div>
-					<div class="features-item__info">
-						<div class="features-item__name"></div>
-						<div class="features-item__text"></div>
-					</div>
+					<div class="features-item__pattern features-item__pattern_blue-line"></div>
 				</div>
 				<div class="features-item">
-					<div class="features-item__desc">
-						<div class="features-item__image"></div>
-						<div class="feature-item__header"></div>
+					<div class="features-item__desc features-item__desc_structure">
+						<div class="features-item__image"><img src="images/desc-structure.svg" alt=""></div>
+						<div class="features-item__header">Развитая инфраструктура</div>
+						<div class="features-item__text">В непосредственной близости расположены детские сады, школы, продуктовые супермаркеты, строительный центр, церковь Иконы Божией Матери, Крестильный храм Святого благоверного великого князя Дмитрия Донского. </div>
 					</div>
-					<div class="features-item__info">
-						<div class="features-item__name"></div>
-						<div class="features-item__text"></div>
-					</div>
+					<div class="features-item__pattern features-item__pattern_yellow-wave"></div>
 				</div>
 				<div class="features-item">
-					<div class="features-item__desc">
-						<div class="features-item__image"></div>
-						<div class="feature-item__header"></div>
+					<div class="features-item__desc features-item__desc_parks">
+						<div class="features-item__image"><img src="images/desc-parks.svg" alt=""></div>
+						<div class="features-item__header">Благоустроенный отдых и досуг</div>
+						<div class="features-item__text">Рядом будет организован парк, площадью 1,2 Га, с прогулочными аллеями, местами для отдыха, спортивными, детскими площадками. Этот парк станет излюбленным местом для утренних пробежек, занятий спортом, прогулок с колясками и отдыха для всех жителей квартала.</div>
 					</div>
-					<div class="features-item__info">
-						<div class="features-item__name"></div>
-						<div class="features-item__text"></div>
-					</div>
+					<div class="features-item__pattern features-item__pattern_blue-point"></div>
 				</div>
 				<div class="features-item">
-					<div class="features-item__desc">
-						<div class="features-item__image"></div>
-						<div class="feature-item__header"></div>
+					<div class="features-item__desc features-item__desc_tech">
+						<div class="features-item__image"><img src="images/desc-tech.svg" alt=""></div>
+						<div class="features-item__header">Современные технологии строительства</div>
+						<div class="features-item__text">При возведении жилого комплекса используются передовые технологии, в частности, для внешней отделки домов используется технология «мокрого фасада».</div>
 					</div>
-					<div class="features-item__info">
-						<div class="features-item__name"></div>
-						<div class="features-item__text"></div>
+					<div class="features-item__pattern features-item__pattern_yellow-line"></div>
+				</div>
+				<div class="features-item">
+					<div class="features-item__desc features-item__desc_comfort">
+						<div class="features-item__image"><img src="images/desc-comfort.svg" alt=""></div>
+						<div class="features-item__header">Дополнительный комфорт</div>
+						<div class="features-item__text">Зона уюта внутри и за пределами квартиры: прозрачные входные группы, улучшенная отделка входных холлов, колясочные и паркинг для велосипедов, лифты повышенной комфортности. Квартиры подготовлены под «чистовую отделку». </div>
 					</div>
+					<div class="features-item__pattern features-item__pattern_blue-wave"></div>
 				</div>
 			</div>
 		</section>
 
 		<section>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-3">
-						<div class="apartament-options">
-							<div class="apartament-options__name">1-комнатные, 18 – 46 м<sup>2</sup></div>
-							<div class="apartament-options__price">1 500 000&#8381;<span>+</span></div>
-						</div>
-					</div>
-					<div class="col-xs-3">
-						<div class="apartament-options">
-							<div class="apartament-options__name">2-комнатные, 60 – 67 м<sup>2</sup></div>
-							<div class="apartament-options__price">2 500 000&#8381;<span>+</span></div>
-						</div>
-					</div>
-					<div class="col-xs-3">
-						<div class="apartament-options">
-							<div class="apartament-options__name">3-комнатные, 82 – 89 м<sup>2</sup></div>
-							<div class="apartament-options__price">3 000 000&#8381;<span>+</span></div>
-						</div>
-					</div>
-					<div class="col-xs-3">
-						<div class="feedback-block">
-							<h3>Получить консультацию</h3>
-							<input type="text" placeholder="Ваше имя" />
-							<input type="text" placeholder="Ваше телефон" />
-							<div class="submit-border">
-								<input type="submit" value="Жду звонка" />
+			<div class="apartament-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-3 ">
+							<div class="apartament-options">
+								<div class="apartament-options__name">1-комнатные, 34,2 – 39,5 м<sup>2</sup></div>
+								<div class="apartament-options__price">1 500 000&#8381;<span>+</span></div>
 							</div>
-							
+						</div>
+						<div class="col-lg-2 col-md-3">
+							<div class="apartament-options">
+								<div class="apartament-options__name">2-комнатные, 39,5 – 59,2 м<sup>2</sup></div>
+								<div class="apartament-options__price">2 500 000&#8381;<span>+</span></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3">
+							<div class="apartament-options">
+								<div class="apartament-options__name">3-комнатные, 85,4 м<sup>2</sup></div>
+								<div class="apartament-options__price">3 000 000&#8381;<span>+</span></div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3">
+							<div class="apartament-options">
+								<div class="apartament-options__name">4-комнатные, 81,5 м<sup>2</sup></div>
+								<div class="apartament-options__price">2 900 000&#8381;<span>+</span></div>
+							</div>
+						</div>
+						<div class="col-lg-1 hidden-md"></div>
+						<div class="col-md-12 visible-md">
+							<hr>
+						</div>
+						<div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-4">
+							<div class="feedback-block">
+								<h3>Получить консультацию</h3>
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Ваше телефон" />
+								<div class="submit-border">
+									<input type="submit" value="Жду звонка" />
+								</div>
+								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -275,13 +284,13 @@
         <div class="footer-wrap">
         	<div class="container">
         		<div class="row">
-        			<div class="col-xs-1 col-xs-offset-1">
+        			<div class="col-lg-1 col-lg-offset-1 col-md-2">
         				<p>СПИК, 2017.</p>
         			</div>
-        			<div class="col-xs-3">
+        			<div class="col-lg-3 col-md-5">
         				<p>Все права защищены.<br>Вы можете копировать информацию с этого сайта<br>только с нашего разрешения.</p>
         			</div>
-        			<div class="col-xs-4">
+        			<div class="col-lg-4 col-md-2">
         				<p>Мы в соцсетях:</p>
 						<p class="footer-soc">
 							<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -289,7 +298,7 @@
 							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						</p>
         			</div>
-        			<div class="col-xs-3">
+        			<div class="col-lg-3 col-md-3">
         				<a class="copyright-5th" href="http://5th.ru/" target="_blank">
         					Создание сайта<br />«Пятое измерение»<br />2017
         				</a>

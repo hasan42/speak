@@ -41,5 +41,20 @@ $(document).ready(function() {
 
     });
 
+    $(".features-item").mouseenter(function() {
+    	$(this).addClass("active");
+    });
+
+    $(".features-item").mouseleave(function() {
+    	$(this).removeClass("active");
+    });
+
+});
+
+$(document).mouseup(function (e) {
+    var container = $(".header-submenu");
+    if (container.has(e.target).length === 0){
+        container.removeClass("active");
+    }
 });
 
