@@ -25,6 +25,10 @@ $(document).ready(function() {
 	resize();
 
 	$(".header-menu__item_submenu").click(function() {
+		var data_for = $(this).attr("data-for");
+		$(".header-submenu__inner").hide();
+		$(".header-submenu__inner[data-for='"+data_for+"']").show();
+		$(".header-menu__item_submenu").removeClass("active");
 		$(".header-submenu").addClass("active");
 		$(this).addClass("active");
 	});
@@ -41,13 +45,14 @@ $(document).ready(function() {
 
     });
 
-    $(".features-item").mouseenter(function() {
-    	$(this).addClass("active");
-    });
-
-    $(".features-item").mouseleave(function() {
-    	$(this).removeClass("active");
-    });
+	$(".features-item").hover(
+		function () {
+	        $(this).removeClass('out').addClass('over');
+	    },
+	    function () {
+	        $(this).removeClass('over').addClass('out');
+	    }
+    );
 
 });
 

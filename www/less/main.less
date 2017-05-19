@@ -58,8 +58,7 @@ a {
         border-color: @link-active-color;
     }
 }
-a, input, button, textarea, .chard-nav__item {
-
+a, input, button, textarea {
     transition: all 0.4s;
 }
 
@@ -222,7 +221,7 @@ input[type="text"], textarea {
 
 .header-menu {
     @media screen and (max-width: 1470px) {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 }
 .header-menu__item {
@@ -643,36 +642,51 @@ input[type="text"], textarea {
     &:last-child {
          border-right: 0;
     }
-    &.active {
-        .features-item__image {
-        }
-        .features-item__desc {
-        }
+    &.over {
         .features-item__desc_place {
-            //margin-top: -232px;
-            animation: animatedFeatures_place 0.7s linear alternate;
+            animation: animatedFeatures_place 0.7s normal;
             animation-fill-mode: forwards;
         }
         .features-item__desc_structure {
-            //margin-top: -253px;
-            animation: animatedFeatures_structure 0.7s linear alternate;
+            animation: animatedFeatures_structure 0.7s normal;
             animation-fill-mode: forwards;
         }
         .features-item__desc_parks {
-            //margin-top: -287px;
-            animation: animatedFeatures_parks 0.7s linear alternate;
+            animation: animatedFeatures_parks 0.7s normal;
             animation-fill-mode: forwards;
         }
         .features-item__desc_tech {
-            //margin-top: -276px;
-            animation: animatedFeatures_tech 0.7s linear alternate;
+            animation: animatedFeatures_tech 0.7s normal;
             animation-fill-mode: forwards;
         }
         .features-item__desc_comfort {
-            //margin-top: -284px;
-            animation: animatedFeatures_comfort 0.7s linear alternate;
+            animation: animatedFeatures_comfort 0.7s normal;
             animation-fill-mode: forwards;
         }
+    }
+    /*&.out {
+        .features-item__desc_place {
+            animation: animatedFeatures_place_out 0.7s alternate-reverse;
+            animation-fill-mode: forwards;
+        }
+        .features-item__desc_structure {
+            animation: animatedFeatures_structure 0.7s reverse;
+            animation-fill-mode: forwards;
+        }
+        .features-item__desc_parks {
+            animation: animatedFeatures_parks 0.7s reverse;
+            animation-fill-mode: forwards;
+        }
+        .features-item__desc_tech {
+            animation: animatedFeatures_tech 0.7s reverse;
+            animation-fill-mode: forwards;
+        }
+        .features-item__desc_comfort {
+            animation: animatedFeatures_comfort 0.7s reverse;
+            animation-fill-mode: forwards;
+        }
+    }*/
+    &:hover {
         .features-item__pattern {
             transform: translate(0, 0);
             transition: transform 0.3s 0.65s;
@@ -683,6 +697,7 @@ input[type="text"], textarea {
     opacity: 1;
     padding: 0 40px 0px;
     background-repeat: no-repeat;
+    transition: transform 0.3s 0.1s;
     //transition: translate 0.2s 1s;
     @media screen and (max-width: 1470px) {
         padding: 0 30px 0;
@@ -695,22 +710,18 @@ input[type="text"], textarea {
 .features-item__desc_structure {
     transform: translate(0, -60px);
     margin-bottom: -10px;
-    transition: translate 0.2s 1s;
 }
 .features-item__desc_parks {
     transform: translate(0, -95px);
     margin-bottom: -45px;
-    transition: translate 0.2s 1s;
 }
 .features-item__desc_tech {
     transform: translate(0, -84px);
     margin-bottom: -34px;
-    transition: translate 0.2s 1s;
 }
 .features-item__desc_comfort {
     transform: translate(0, -90px);
     margin-bottom: -40px;
-    transition: translate 0.2s 1s;
 }
 
 .features-item__image {
