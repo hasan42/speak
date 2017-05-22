@@ -1,6 +1,7 @@
 @white-color:#ffffff;
 @black-color:#000000;
 @link-color:#3a438e;
+@link-color-border:#c4c6dd;
 @link-active-color:#0072bc;
 @link-color-yellow:#d2ae42;
 
@@ -314,9 +315,13 @@ input[type="text"], textarea {
 
 .header-info {
     float: right;
+    position: relative;
+    z-index: 5;
     a {
         font-size: 14px;
         line-height: 22px;
+        text-decoration: none;
+        border-bottom: 1px solid @link-color-border;
     }
     @media screen and (max-width: 1470px) {
     }
@@ -360,7 +365,7 @@ input[type="text"], textarea {
     vertical-align: top;
     a {
         text-decoration: none;
-        border-bottom: 1px dashed @link-color;
+        border-bottom: 1px dashed @link-color-border;
     }
     p {
         font-size: 16px;
@@ -461,7 +466,7 @@ input[type="text"], textarea {
 }
 .media-item__add {
     background-color: @white-color;
-    padding: 0 14px 0 4px;
+    margin: 0 14px 0 4px;
     display: block;
     font-size: 0;
 }
@@ -554,6 +559,7 @@ input[type="text"], textarea {
     display: inline-block;
     width: 70%;
     min-width: 70%;
+    padding: 0 30px;
     vertical-align: middle;
     text-align: center;
     position: relative;
@@ -572,121 +578,33 @@ input[type="text"], textarea {
 
 .features-block {
     font-size: 0;
+    border-bottom: 1px solid #d7d7d7;
+    overflow: hidden;
 }
-
-@keyframes animatedFeatures_place {
-    0 {
-        transform: translate(0,-40px);
-    }
-    50% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translate(0,-232px);
-    }
-}
-@keyframes animatedFeatures_structure {
-    0 {
-        transform: translate(0,-60px);
-    }
-    50% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translate(0,-253px);
-    }
-}
-@keyframes animatedFeatures_parks {
-    0 {
-        transform: translate(0,-95px);
-    }
-    50% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translate(0,-287px);
-    }
-}
-@keyframes animatedFeatures_tech {
-    0 {
-        transform: translate(0,-84px);
-    }
-    50% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translate(0,-276px);
-    }
-}
-@keyframes animatedFeatures_comfort {
-    0 {
-        transform: translate(0,-90px);
-    }
-    50% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translate(0,-284px);
-    }
-}
-
 .features-item {
     width: 20%;
-    display: table-cell;
+    display: inline-block;
     position: relative;
     border-top: 1px solid #d7d7d7;
     border-right: 1px solid #d7d7d7;
-    border-bottom: 1px solid #d7d7d7;
     overflow: hidden;
     vertical-align: top;
     &:last-child {
          border-right: 0;
     }
-    &.over {
-        .features-item__desc_place {
-            animation: animatedFeatures_place 0.7s normal;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_structure {
-            animation: animatedFeatures_structure 0.7s normal;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_parks {
-            animation: animatedFeatures_parks 0.7s normal;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_tech {
-            animation: animatedFeatures_tech 0.7s normal;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_comfort {
-            animation: animatedFeatures_comfort 0.7s normal;
-            animation-fill-mode: forwards;
-        }
-    }
-    /*&.out {
-        .features-item__desc_place {
-            animation: animatedFeatures_place_out 0.7s alternate-reverse;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_structure {
-            animation: animatedFeatures_structure 0.7s reverse;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_parks {
-            animation: animatedFeatures_parks 0.7s reverse;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_tech {
-            animation: animatedFeatures_tech 0.7s reverse;
-            animation-fill-mode: forwards;
-        }
-        .features-item__desc_comfort {
-            animation: animatedFeatures_comfort 0.7s reverse;
-            animation-fill-mode: forwards;
-        }
-    }*/
     &:hover {
+        .features-item__image {
+            height: 0px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            transform: translate(0,0);
+            opacity: 0;
+            transition: margin-top 0.3s 0.1s, transform 0.3s 0.1s, margin-bottom 0.3s 0.1s, opacity 0.3s 0.7s, height 0.3s 0.7s;
+        }
+        .features-item__header {
+            margin-top: 100px;
+        }
+
         .features-item__pattern {
             transform: translate(0, 0);
             transition: transform 0.3s 0.65s;
@@ -697,48 +615,29 @@ input[type="text"], textarea {
     opacity: 1;
     padding: 0 40px 0px;
     background-repeat: no-repeat;
-    transition: transform 0.3s 0.1s;
-    //transition: translate 0.2s 1s;
     @media screen and (max-width: 1470px) {
         padding: 0 30px 0;
     }
-}
-.features-item__desc_place {
-    transform: translate(0, -40px);
-    margin-bottom: 10px;
-}
-.features-item__desc_structure {
-    transform: translate(0, -60px);
-    margin-bottom: -10px;
-}
-.features-item__desc_parks {
-    transform: translate(0, -95px);
-    margin-bottom: -45px;
-}
-.features-item__desc_tech {
-    transform: translate(0, -84px);
-    margin-bottom: -34px;
-}
-.features-item__desc_comfort {
-    transform: translate(0, -90px);
-    margin-bottom: -40px;
 }
 
 .features-item__image {
     display: block;
     position: relative;
+    height: 287px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: -87px;
     background-position: left bottom;
     background-repeat: no-repeat;
-    img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
-    }
-    @media screen and (max-width: 1470px) {
-        img {
-            width: 70%;
-            height: 70%;
-        }
+    background-size: contain;
+    transform: translate(0, -87px);
+    opacity: 1;
+    transition: margin-top 0.3s 0.1s, transform 0.3s 0.1s, margin-bottom 0.3s 0.1s, height 0.3s 0.1s, opacity 0.3s 0.1s;
+    @media screen and (max-width: 1740px) {
+        height: 180px;
+        margin-bottom: -55px;
+        background-size: contain ;
+        transform: translate(0, -55px);
     }
 }
 .features-item__image_desc-place {
@@ -760,14 +659,16 @@ input[type="text"], textarea {
 .features-item__header {
     font-size: 30px;
     margin-top: 30px;
+    transition: margin-top 0.3s 0.1s;
     @media screen and (max-width: 1470px) {
         font-size: 24px;
     }
 }
 .features-item__text {
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 50px;
 }
 
 @keyframes animatedBackground {
@@ -854,6 +755,8 @@ input[type="text"], textarea {
         border-left: 0px solid @white-color; 
     }
 }
+
+
 .apartament-block {
     padding: 120px 0;
     transition: all 0.4s;

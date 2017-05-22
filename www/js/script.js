@@ -8,6 +8,9 @@ function resize() {
 		if( w_h_ss > 300 ){
 			$(".media-item").css("height", w_h_ss);
 		}
+		features_block = $(".features-block").outerHeight();
+		$(".features-block, .features-item").css("height", features_block);
+
 	}else{//мобильник
 	}
 }
@@ -51,14 +54,14 @@ $(document).ready(function() {
 
     });
 
-	$(".features-item").hover(
+	/*$(".features-item").hover(
 		function () {
 	        $(this).removeClass('out').addClass('over');
 	    },
 	    function () {
 	        $(this).removeClass('over').addClass('out');
 	    }
-    );
+    );*/
 
 });
 
