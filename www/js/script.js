@@ -4,7 +4,7 @@ function resize() {
 	w_w = $(window).width();
 	w_h = $(window).height();
 	if( w_w > 768){ //десктоп
-		var w_h_ss = w_h - 120;
+		var w_h_ss = w_h - 220;
 		if( w_h_ss > 300 ){
 			$(".media-item").css("height", w_h_ss);
 		}
@@ -25,12 +25,18 @@ $(document).ready(function() {
 	resize();
 
 	$(".header-menu__item_submenu").click(function() {
-		var data_for = $(this).attr("data-for");
-		$(".header-submenu__inner").hide();
-		$(".header-submenu__inner[data-for='"+data_for+"']").show();
-		$(".header-menu__item_submenu").removeClass("active");
-		$(".header-submenu").addClass("active");
-		$(this).addClass("active");
+		if( $(this).hasClass("active") ){
+			$(this).removeClass("active");
+			(".header-submenu").removeClass("active");
+			$(".header-menu__item_submenu").removeClass("active");
+		}else{
+			var data_for = $(this).attr("data-for");
+			$(".header-submenu__inner").hide();
+			$(".header-submenu__inner[data-for='"+data_for+"']").show();
+			$(".header-menu__item_submenu").removeClass("active");
+			$(".header-submenu").addClass("active");
+			$(this).addClass("active");
+		}
 	});
 	$(".header-submenu__close").click(function() {
 		$(".header-submenu").removeClass("active");

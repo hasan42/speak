@@ -179,8 +179,13 @@ textarea {
   left: 0;
   right: 0;
   background-color: #ffffff;
-  padding: 25px 0 20px;
   z-index: 1000;
+}
+.header-main {
+  position: relative;
+  padding: 25px 0 20px;
+  z-index: 100;
+  background-color: #ffffff;
 }
 .header-logo a {
   text-decoration: none;
@@ -272,6 +277,7 @@ textarea {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
+  z-index: 10;
 }
 .header-submenu__inner {
   margin-top: 20px;
@@ -390,6 +396,7 @@ textarea {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
   height: 800px;
 }
@@ -484,7 +491,6 @@ textarea {
   font-size: 16px;
   white-space: nowrap;
   text-transform: uppercase;
-  padding-left: 126px;
   position: absolute;
   bottom: 0;
   width: 100px;
@@ -1003,11 +1009,21 @@ textarea {
   border: 1px solid #ababab;
   margin: 60px 0 30px;
 }
+.apartament-block a {
+  color: #252525;
+  text-decoration: none;
+}
 .apartament-block:hover,
 .apartament-block:focus,
 .apartament-block:active {
   background-color: #3a438e;
   color: #ffffff;
+}
+.apartament-block:hover a,
+.apartament-block:focus a,
+.apartament-block:active a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .apartament-block:hover .apartament-options__price span,
 .apartament-block:focus .apartament-options__price span,
@@ -1019,6 +1035,30 @@ textarea {
 .apartament-block:active .feedback-block input[type="text"] {
   background-color: transparent;
   color: #ffffff;
+}
+.apartament-block:hover .feedback-block input[type="text"]::-webkit-input-placeholder,
+.apartament-block:focus .feedback-block input[type="text"]::-webkit-input-placeholder,
+.apartament-block:active .feedback-block input[type="text"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #878ec6;
+}
+.apartament-block:hover .feedback-block input[type="text"]::-moz-placeholder,
+.apartament-block:focus .feedback-block input[type="text"]::-moz-placeholder,
+.apartament-block:active .feedback-block input[type="text"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #878ec6;
+}
+.apartament-block:hover .feedback-block input[type="text"]:-ms-input-placeholder,
+.apartament-block:focus .feedback-block input[type="text"]:-ms-input-placeholder,
+.apartament-block:active .feedback-block input[type="text"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #878ec6;
+}
+.apartament-block:hover .feedback-block input[type="text"]:-moz-placeholder,
+.apartament-block:focus .feedback-block input[type="text"]:-moz-placeholder,
+.apartament-block:active .feedback-block input[type="text"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #878ec6;
 }
 .apartament-block:hover .feedback-block .submit-border,
 .apartament-block:focus .feedback-block .submit-border,
@@ -1045,6 +1085,16 @@ textarea {
 .apartament-options {
   display: block;
   margin-top: 70px;
+}
+.apartament-options:hover,
+.apartament-options:focus,
+.apartament-options:active {
+  color: #d2ae42;
+}
+.apartament-options:hover .apartament-options__price span,
+.apartament-options:focus .apartament-options__price span,
+.apartament-options:active .apartament-options__price span {
+  color: #d2ae42;
 }
 @media screen and (max-width: 1470px) {
   .apartament-options {
