@@ -39,6 +39,8 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+  width: 100%;
+  min-width: 1280px;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -180,6 +182,7 @@ textarea {
   right: 0;
   background-color: #ffffff;
   z-index: 1000;
+  min-width: 1280px;
 }
 .header-main {
   position: relative;
@@ -259,9 +262,9 @@ textarea {
 }
 .header-submenu {
   opacity: 0;
-  -webkit-transform: translate(0, -160px);
-      -ms-transform: translate(0, -160px);
-          transform: translate(0, -160px);
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   -webkit-transition: opacity 0.4s 0s, -webkit-transform 0.4s 0s;
   transition: opacity 0.4s 0s, -webkit-transform 0.4s 0s;
   transition: opacity 0.4s 0s, transform 0.4s 0s;
@@ -468,116 +471,97 @@ textarea {
   display: inline-block;
   width: 30%;
   min-width: 30%;
-  height: 200px;
+  height: 201px;
   vertical-align: middle;
   position: relative;
-  -webkit-transform: translate(0px, 0);
-      -ms-transform: translate(0px, 0);
-          transform: translate(0px, 0);
-  -webkit-transition: -webkit-transform 0.4s 0.1s;
-  transition: -webkit-transform 0.4s 0.1s;
-  transition: transform 0.4s 0.1s;
-  transition: transform 0.4s 0.1s, -webkit-transform 0.4s 0.1s;
   background-color: #ffffff;
   padding-left: 10px;
 }
-.media-item__control a {
-  display: inline-block;
-  line-height: 100px;
-  border-top: 1px solid #e1e1e1;
-  background-position: center left 50px;
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  font-size: 16px;
-  white-space: nowrap;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  width: 100px;
-  color: #000000;
-}
-.media-item__control a:first-child {
-  border-top: 0;
-  top: 0;
-  bottom: inherit;
-}
-.media-item__control a span {
-  -webkit-transition: opacity 0.4s 0s, background 0.4s 0s;
-  transition: opacity 0.4s 0s, background 0.4s 0s;
-  opacity: 0;
-}
-.media-item__control a:hover,
-.media-item__control a:focus,
-.media-item__control a:active {
-  color: #353681;
-}
-.media-item__control:hover,
-.media-item__control:focus,
-.media-item__control:active {
-  -webkit-transform: translate(-230px, 0);
-      -ms-transform: translate(-230px, 0);
-          transform: translate(-230px, 0);
-}
-.media-item__control:hover a,
-.media-item__control:focus a,
-.media-item__control:active a {
-  width: 360px;
-}
-.media-item__control:hover a span,
-.media-item__control:focus a span,
-.media-item__control:active a span {
+.media-item__control:hover .media-control__name,
+.media-item__control:focus .media-control__name,
+.media-item__control:active .media-control__name {
   opacity: 1;
+  width: 220px;
+  -webkit-transition: width 0.3s 0.1s, opacity 0.3s 0.4s;
+  transition: width 0.3s 0.1s, opacity 0.3s 0.4s;
 }
-@media screen and (max-width: 1871px) {
-  .media-item__control a {
-    padding-left: 105px;
-    background-position: center left 30px;
-  }
-  .media-item__control:hover a,
-  .media-item__control:focus a,
-  .media-item__control:active a {
-    width: 320px;
-  }
-}
-@media screen and (max-width: 1669px) {
-  .media-item__control a {
-    padding-left: 80px;
-    width: 80px;
-    background-position: center left 20px;
-  }
-  .media-item__control:hover a,
-  .media-item__control:focus a,
-  .media-item__control:active a {
-    width: 305px;
-  }
+.media-item__control:hover .media-control__name span,
+.media-item__control:focus .media-control__name span,
+.media-item__control:active .media-control__name span {
+  border-bottom: 1px solid #c2c2d9;
 }
 @media screen and (max-width: 1470px) {
   .media-item__control {
-    height: 160px;
+    height: 161px;
   }
-  .media-item__control a {
+}
+.media-control__block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 0 10px;
+}
+.media-control__item {
+  display: block;
+  vertical-align: middle;
+  font-size: 16px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  border: 0;
+}
+.media-control__item:last-child {
+  border-top: 1px solid #e1e1e1;
+  bottom: 0;
+  top: inherit;
+}
+.media-control__item:hover,
+.media-control__item:focus,
+.media-control__item:active {
+  color: #353681;
+}
+.media-control__item:hover .media-control__map,
+.media-control__item:focus .media-control__map,
+.media-control__item:active .media-control__map {
+  background-image: url('../images/media-marker-act.svg');
+}
+.media-control__item:hover .media-control__filter,
+.media-control__item:focus .media-control__filter,
+.media-control__item:active .media-control__filter {
+  background-image: url('../images/media-filter-act.svg');
+}
+.media-control__image {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 1470px) {
+  .media-control__image {
+    width: 80px;
     height: 80px;
-    line-height: 80px;
-    width: 60px;
-    padding-left: 60px;
-    background-position: center left 12px;
   }
+}
+.media-control__name {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+  width: 1px;
+  -webkit-transition: width 0.3s 0.4s, opacity 0.3s 0.1s;
+  transition: width 0.3s 0.4s, opacity 0.3s 0.1s;
+}
+.media-control__name span {
+  border-bottom: 1px solid #bdbdbd;
 }
 .media-control__map {
   background-image: url('../images/media-marker.svg');
 }
-.media-control__map:hover,
-.media-control__map:focus,
-.media-control__map:active {
-  background-image: url('../images/media-marker-act.svg');
-}
 .media-control__filter {
   background-image: url('../images/media-filter.svg');
-}
-.media-control__filter:hover,
-.media-control__filter:focus,
-.media-control__filter:active {
-  background-image: url('../images/media-filter-act.svg');
 }
 .media-item__image {
   display: inline-block;
@@ -871,6 +855,12 @@ textarea {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+@media screen and (max-width: 1470px) {
+  .features-item__image img {
+    width: 70%;
+    height: 70%;
+  }
 }
 .features-item__image_desc-place {
   background-image: url('../images/desc-place.svg');
